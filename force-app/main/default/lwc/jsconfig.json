@@ -2,7 +2,35 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/errorPanel": [
+                "errorPanel/errorPanel.js"
+            ],
+            "c/expenseGaugeChart": [
+                "expenseGaugeChart/expenseGaugeChart.js"
+            ],
+            "c/expenseLineChart": [
+                "expenseLineChart/expenseLineChart.js"
+            ],
+            "c/expensePieChart": [
+                "expensePieChart/expensePieChart.js"
+            ],
+            "c/ldsUtils": [
+                "ldsUtils/ldsUtils.js"
+            ],
+            "c/viewSource": [
+                "viewSource/viewSource.js"
+            ],
+            "c/expenseLoad": [
+                "expenseLoad/expenseLoad.js"
+            ],
+            "c/expenseCreate": [
+                "expenseCreate/expenseCreate.js"
+            ],
+            "c/expenseDatatable": [
+                "expenseDatatable/expenseDatatable.js"
+            ]
+        }
     },
     "include": [
         "**/*",
