@@ -167,6 +167,7 @@
     </nameField>
     <pluralLabel>Expenses</pluralLabel>
     <searchLayouts>
+        <searchResultsAdditionalFields>Total_Amount__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Vendor__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
