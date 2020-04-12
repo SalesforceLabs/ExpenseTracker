@@ -1,11 +1,7 @@
-import { LightningElement } from 'lwc';
-
+import { LightningElement, track, wire } from 'lwc';
 import { loadScript } from 'lightning/platformResourceLoader';
 import chartjs from '@salesforce/resourceUrl/chart';
-
-const randomScalingFactor = () => {
-    return Math.round(Math.random(0, 100));
-};
+import getTotalExpenseByMonth from '@salesforce/apex/LineChartController.getTotalExpenseByMonth';
 
 const chartColors = {
 	red: 'rgb(255, 99, 132)',
@@ -17,50 +13,50 @@ const chartColors = {
 	grey: 'rgb(201, 203, 207)'
 };
 
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+
 export default class ExpenseLineChart extends LightningElement {
     error;
     chart;
+    @track data;
+    month = [];
+    totalAmountMonth = [];
     chartjsInitialized = false;
+    @wire(getTotalExpenseByMonth) 
+    getTotalExpenseMonth ({error, data}) {
+        if (data) {
+            this.data = data;
+            for (let i = 0; i < this.data.length; i++){
+                this.month.push(months[data[i].month-1]);
+                this.totalAmountMonth.push(data[i].totalAmount);   
+            }  
+        }
+        else if (error) {
+            console.log(error);
+            this.error = error;
+        }
+    };
 
     config = {
         type: 'line',
         data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: this.month,
             datasets: [{
-                label: 'My First dataset',
-                backgroundColor: chartColors.red,
-                borderColor: chartColors.red,
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ],
-                fill: false,
-            }, {
-                label: 'My Second dataset',
-                fill: false,
-                backgroundColor: chartColors.blue,
+                label: 'Expenses by month',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: chartColors.blue,
-                data: [
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor(),
-                    randomScalingFactor()
-                ],
+                data: this.totalAmountMonth,
+                fill: true,
             }]
         },
         options: {
+            legend: {
+                display: false
+            },
             responsive: true,
             title: {
                 display: true,
-                text: 'Chart.js Line Chart'
+                text: 'Expenses Line Chart'
             },
             tooltips: {
                 mode: 'index',
@@ -82,7 +78,7 @@ export default class ExpenseLineChart extends LightningElement {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: 'Total Expense'
                     }
                 }
             }
