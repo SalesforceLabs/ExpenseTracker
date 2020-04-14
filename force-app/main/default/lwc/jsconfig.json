@@ -6,9 +6,6 @@
             "c/errorPanel": [
                 "errorPanel/errorPanel.js"
             ],
-            "c/expenseGaugeChart": [
-                "expenseGaugeChart/expenseGaugeChart.js"
-            ],
             "c/expenseLineChart": [
                 "expenseLineChart/expenseLineChart.js"
             ],
@@ -20,15 +17,6 @@
             ],
             "c/viewSource": [
                 "viewSource/viewSource.js"
-            ],
-            "c/expenseLoad": [
-                "expenseLoad/expenseLoad.js"
-            ],
-            "c/expenseCreate": [
-                "expenseCreate/expenseCreate.js"
-            ],
-            "c/expenseDatatable": [
-                "expenseDatatable/expenseDatatable.js"
             ]
         }
     },
