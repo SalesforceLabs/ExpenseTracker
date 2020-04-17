@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expense_Item_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Communications</fullName>
+                <default>false</default>
+                <label>Communications</label>
+            </value>
+            <value>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+                <label>Entertainment</label>
+            </value>
+            <value>
+                <fullName>Fees</fullName>
+                <default>false</default>
+                <label>Fees</label>
+            </value>
+            <value>
+                <fullName>HR Services</fullName>
+                <default>false</default>
+                <label>HR Services</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Meals</fullName>
+                <default>false</default>
+                <label>Meals</label>
+            </value>
+            <value>
+                <fullName>Meetings and Events</fullName>
+                <default>false</default>
+                <label>Meetings and Events</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Real Estate &amp; Facilities</fullName>
+                <default>false</default>
+                <label>Real Estate &amp; Facilities</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Travel Expenses</fullName>
+                <default>false</default>
+                <label>Travel Expenses</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
