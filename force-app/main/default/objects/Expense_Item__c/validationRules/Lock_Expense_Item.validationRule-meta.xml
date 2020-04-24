@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Expense_Item</fullName>
+    <active>true</active>
+    <errorConditionFormula>Expense__r.Approval_Process_Started__c = TRUE</errorConditionFormula>
+    <errorMessage>This expense report is already submitted for approval. You can no longer modify the items in this expense report.</errorMessage>
+</ValidationRule>

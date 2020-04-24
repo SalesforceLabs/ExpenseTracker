@@ -2,7 +2,23 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/errorPanel": [
+                "errorPanel/errorPanel.js"
+            ],
+            "c/expenseLineChart": [
+                "expenseLineChart/expenseLineChart.js"
+            ],
+            "c/expensePieChart": [
+                "expensePieChart/expensePieChart.js"
+            ],
+            "c/ldsUtils": [
+                "ldsUtils/ldsUtils.js"
+            ],
+            "c/viewSource": [
+                "viewSource/viewSource.js"
+            ]
+        }
     },
     "include": [
         "**/*",
