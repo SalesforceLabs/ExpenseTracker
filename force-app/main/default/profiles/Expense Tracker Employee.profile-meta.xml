@@ -16,11 +16,6 @@
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Expense_Item__c.Expense_Item_Category__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Expense_Vendor__c.Vendor_Address__c</field>
         <readable>true</readable>
     </fieldPermissions>
