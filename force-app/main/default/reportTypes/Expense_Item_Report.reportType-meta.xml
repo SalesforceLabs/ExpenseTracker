@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Expense_Item__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Expense Item Report with the ability to filter on Category, Transaction Date, and Expense Name.</description>
+    <label>Expense Item Report</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Expense_Item__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Expense_Item__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Expense__c.Name</field>
+            <table>Expense_Item__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Expense_Item_Category__c</field>
+            <table>Expense_Item__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Expense_Item_Transaction_Date__c</field>
+            <table>Expense_Item__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Expense_Item_Amount__c</field>
+            <table>Expense_Item__c</table>
+        </columns>
+        <masterLabel>Expense Items</masterLabel>
+    </sections>
+</ReportType>
