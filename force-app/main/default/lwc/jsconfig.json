@@ -14,9 +14,6 @@
             ],
             "c/ldsUtils": [
                 "ldsUtils/ldsUtils.js"
-            ],
-            "c/viewSource": [
-                "viewSource/viewSource.js"
             ]
         }
     },
