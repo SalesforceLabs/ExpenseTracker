@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Expense__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Expense Report with the ability to filter on Vendor, Owner, Date, and Approval Status.</description>
+    <label>Expense Report</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Expense_Approval_Status__c</field>
+            <table>Expense__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Expense_Comment__c</field>
+            <table>Expense__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Expense_Date__c</field>
+            <table>Expense__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Expense__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Expense__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner</field>
+            <table>Expense__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Expense_Total_Amount__c</field>
+            <table>Expense__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Vendor__c.Name</field>
+            <table>Expense__c</table>
+        </columns>
+        <masterLabel>Expenses</masterLabel>
+    </sections>
+</ReportType>
