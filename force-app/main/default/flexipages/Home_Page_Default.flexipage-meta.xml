@@ -20,16 +20,6 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>runtime_approval_process:pendingApprovalCard</componentName>
-            <visibilityRule>
-                <criteria>
-                    <leftValue>{!$Permission.StandardPermission.ManageUsers}</leftValue>
-                    <operator>EQUAL</operator>
-                    <rightValue>true</rightValue>
-                </criteria>
-            </visibilityRule>
-        </componentInstances>
-        <componentInstances>
             <componentInstanceProperties>
                 <name>entityNames</name>
                 <value>[&quot;Expense__c&quot;]</value>
@@ -43,13 +33,6 @@
                 <value>3</value>
             </componentInstanceProperties>
             <componentName>flexipage:recentItems</componentName>
-            <visibilityRule>
-                <criteria>
-                    <leftValue>{!$Permission.StandardPermission.ManageUsers}</leftValue>
-                    <operator>EQUAL</operator>
-                    <rightValue>false</rightValue>
-                </criteria>
-            </visibilityRule>
         </componentInstances>
         <name>right</name>
         <type>Region</type>
