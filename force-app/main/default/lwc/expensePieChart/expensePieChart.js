@@ -24,6 +24,22 @@ export default class ExpensePieChart extends LightningElement {
             console.log(error);
             this.error = error;
         }
+
+        //Load chart if not loaded
+        if (!this.chartjsInitialized && (data || error)) {
+            this.chartjsInitialized = true;
+
+            loadScript(this, chartjs)
+                .then(() => {
+                    const canvas = document.createElement('canvas');
+                    this.template.querySelector('div.chart').appendChild(canvas);
+                    const ctx = canvas.getContext('2d');
+                    this.chart = new window.Chart(ctx, this.config);
+                })
+                .catch(error => {
+                    this.error = error;
+                });
+        }
     };
 
     config = {
@@ -57,22 +73,4 @@ export default class ExpensePieChart extends LightningElement {
             }
         }
     };
-
-    renderedCallback() {
-        if (this.chartjsInitialized) {
-            return;
-        }
-        this.chartjsInitialized = true;
-
-        loadScript(this, chartjs)
-            .then(() => {
-                const canvas = document.createElement('canvas');
-                this.template.querySelector('div.chart').appendChild(canvas);
-                const ctx = canvas.getContext('2d');
-                this.chart = new window.Chart(ctx, this.config);
-            })
-            .catch(error => {
-                this.error = error;
-            });
-    }
 }
